@@ -68,6 +68,7 @@ search.addEventListener('input', function() {
     fetch(`${db}/search/region?prefix=` + value)
         .then(response => response.json())
         .then(data => {
+
             // Check if data.names is not empty
             if (data.names.length > 0) {
                 autocomplete.parentElement.classList.add('show');
