@@ -39,7 +39,8 @@ main/build
 .idea
 cmake-build-*
 
-#Mac
-
+# Mac
 **/.DS_Store
 
+# AWS
+.pem
