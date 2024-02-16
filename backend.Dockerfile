@@ -41,5 +41,5 @@ RUN make
 # Specify the command to run your application
 CMD ["./uni_bd2_backend-exe"]
 
-# docker build -t my-backend-image -f backend.dockerfile .
-# docker run -p 8000:8000 --name my-backend-container my-backend-image
+# docker build -t kosiekk/bd2-backend -f backend.Dockerfile .
+# docker run -p 8000:8000 --name my-backend-container kosiekk/bd2-backend
