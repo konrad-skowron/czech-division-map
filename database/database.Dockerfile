@@ -1,8 +1,5 @@
 FROM postgres:16.1
 
-ENV POSTGRES_PASSWORD=postgres
-ENV POSTGRES_USER=postgres
-
 COPY ./sql/000_MIGRATE_postgres.sql /docker-entrypoint-initdb.d/
 COPY ./sql/001_init.sql /docker-entrypoint-initdb.d/
 

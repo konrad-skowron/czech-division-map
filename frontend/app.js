@@ -1,6 +1,6 @@
 // localhost:8000/swagger/ui
 
-const db = 'http://localhost:8000';
+const db = 'http://13.60.41.195:8000';
 const mapContainer = document.querySelector('.mapcontainer');
 const treeContainer = document.querySelector('.treecontainer');
 const tableContainer = document.querySelector('.tablecontainer');
