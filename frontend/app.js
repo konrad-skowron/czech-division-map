@@ -97,7 +97,7 @@ search.addEventListener('input', function() {
                     row.appendChild(left);
 
                     let right = document.createElement('div');
-                    right.classList.add('text-body-secondary', 'text-end');
+                    right.classList.add('text-end');
                     right.style.flex = "1";
                     right.textContent = 'R';
                     right.style.fontSize = '0.875rem';
@@ -143,7 +143,7 @@ search.addEventListener('input', function() {
                                 row.appendChild(left);
 
                                 let right = document.createElement('div');
-                                right.classList.add('text-body-secondary', 'text-end');
+                                right.classList.add('text-end');
                                 right.style.flex = "1";
                                 right.textContent = 'D';
                                 right.style.fontSize = '0.875rem';
