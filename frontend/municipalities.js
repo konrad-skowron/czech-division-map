@@ -9,6 +9,7 @@ async function renderMunicipalities(district) {
     let tbody = document.createElement('tbody');
 
     if (!district) {
+        document.getElementById('search').style.visibility = 'hidden';
         let title2 = document.createElement('h4');
         title2.classList.add('text-center', 'mt-2', 'fw-normal');
         title2.textContent = 'Municipalities of the Czech Republic';

@@ -1,5 +1,6 @@
 async function renderRegions() {
     stopFetch();
+    document.getElementById('search').style.visibility = 'visible';
     tableContainer.innerHTML = '';
     treeContainer.innerHTML = '';
     mapContainer.innerHTML = '';
@@ -10,7 +11,7 @@ async function renderRegions() {
     title1.style.marginBottom = '20px';
     title1.textContent = 'Regions of the Czech Republic';
     mapContainer.appendChild(title1);
-            
+
     fetch('svg/regions.svg', { signal })
         .then(response => response.text())
         .then(svg => {
@@ -75,13 +76,13 @@ async function renderRegions() {
                 dom: 'tpl'
             });
         });
-    
+
     let countryList = document.createElement('ul');
     countryList.style.marginTop = '45px';
     let topElement = document.createElement('li');
     topElement.textContent = 'Czech Republic';
     topElement.style.fontSize = '.875rem';
-    
+
     let regionList = document.createElement('ul');
     await fetch(`${db}/stats/regions`, { signal })
         .then(response => response.json())

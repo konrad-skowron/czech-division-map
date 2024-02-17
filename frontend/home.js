@@ -1,5 +1,6 @@
 async function renderHome() {
     stopFetch();
+    document.getElementById('search').style.visibility = 'visible';
     tableContainer.innerHTML = '';
     mapContainer.innerHTML = '';
     treeContainer.innerHTML = '';
