@@ -17,7 +17,7 @@ function stopFetch() {
 }
 
 function displayTooltip(element) {
-    if (navigator.userAgentData.mobile) return;
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) return;
 
     // Create or get the tooltip element
     let tooltip = document.querySelector('.mytooltip');
