@@ -17,6 +17,8 @@ function stopFetch() {
 }
 
 function displayTooltip(element) {
+    if (navigator.userAgentData.mobile) return;
+
     // Create or get the tooltip element
     let tooltip = document.querySelector('.mytooltip');
     if (!tooltip) {
@@ -78,8 +80,14 @@ search.addEventListener('input', function() {
                     let option = document.createElement('a');
                     option.href = '#';
                     option.onclick = () => {
-                        renderDistricts(document.getElementById(item));
-                        return false;
+                        fetch('svg/regions.svg')
+                            .then(response => response.text())
+                            .then(svg => {
+                                let newMapContainer = document.createElement('div');
+                                newMapContainer.innerHTML = svg;
+                                renderDistricts(newMapContainer.querySelector('#' + item));
+                                return false;
+                            });
                     };
                     option.classList.add('dropdown-item');
                     option.addEventListener('click', function(event) {
@@ -124,8 +132,14 @@ search.addEventListener('input', function() {
                                 let option = document.createElement('a');
                                 option.href = '#';
                                 option.onclick = () => {
-                                    renderMunicipalities(document.getElementById(item));
-                                    return false;
+                                    fetch('svg/districts.svg')
+                                        .then(response => response.text())
+                                        .then(svg => {
+                                            let newMapContainer = document.createElement('div');
+                                            newMapContainer.innerHTML = svg;
+                                            renderMunicipalities(newMapContainer.querySelector('#' + item));
+                                            return false;
+                                        });
                                 };
                                 option.classList.add('dropdown-item');
                                 option.addEventListener('click', function(event) {

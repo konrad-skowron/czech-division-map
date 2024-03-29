@@ -96,7 +96,8 @@ async function renderMunicipalities(district) {
     title1.textContent = `Municipalities of the ${district.id} district`;
 
     const regionMap = document.getElementById('regions');
-    if (regionMap) {
+    const destination = mapContainer.querySelector('[id="' + district.id + '"]');
+    if (regionMap || !destination) {
         await fetch('svg/districts.svg', { signal })
             .then(response => response.text())
             .then(svg => {
