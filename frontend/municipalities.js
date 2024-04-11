@@ -87,7 +87,7 @@ async function renderMunicipalities(district) {
             datatable = new DataTable('#myTable', {
                 dom: 'ftpl'
             });
-        }, 1500);
+        }, 5000);
 
         return;
     }

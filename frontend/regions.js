@@ -1,5 +1,6 @@
 async function renderRegions() {
     stopFetch();
+    hideTooltip();
     document.getElementById('search').style.visibility = 'visible';
     tableContainer.innerHTML = '';
     treeContainer.innerHTML = '';
