@@ -1,9 +1,9 @@
-# Administrative Regions of The Czech Republic - Databases 2 Project
+# Administrative Division of the Czech Republic - Databases 2 Project
 Created by:
 - Oskar Gusta (back-end)
 - Konrad Skowron (front-end, dockerization)
 
-## [Check out the demo!](http://map.eurasianskylark.pl)
+## [Check it out!](http://map.eurasianskylark.pl)
 This project's demo is currently deployed on Google Cloud
 
 ## Compile and implement
