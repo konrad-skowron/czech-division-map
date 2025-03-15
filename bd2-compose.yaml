@@ -28,8 +28,26 @@ services:
       - database
       - backend
 
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: bd2-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@gmail.com
+      
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - database
+
 volumes:
   postgres_data:
     driver: local
 
 # docker-compose -f bd2-compose.yaml up
+# 
+# pgAdmin db connection
+# Host: database
+# Port: 5432
+# Username: postgres
+# Password: postgres
