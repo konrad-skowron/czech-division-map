@@ -3,7 +3,7 @@ Created by:
 - Oskar Gusta (back-end)
 - Konrad Skowron (front-end, dockerization)
 
-## [Check it out!](http://map.eurasianskylark.pl)
+## [Check it out!](http://map.eurasianskylark.net)
 This project's demo is currently deployed on Google Cloud
 
 ## Compile and implement
